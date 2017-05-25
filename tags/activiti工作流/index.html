@@ -6,12 +6,12 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https:fengjisen.github.io">
-  <title>Fenng Code</title>
+  <title>Tag: activiti工作流 | Fenng Code</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="胆小认生，不易相处，年轻无为，卖马为生。">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Fenng Code">
-<meta property="og:url" content="https:fengjisen.github.io/index.html">
+<meta property="og:url" content="https:fengjisen.github.io/tags/activiti工作流/index.html">
 <meta property="og:site_name" content="Fenng Code">
 <meta property="og:description" content="胆小认生，不易相处，年轻无为，卖马为生。">
 <meta name="twitter:card" content="summary">
@@ -150,190 +150,34 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-Activiti" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
+  
     
-      <header class="article-header">
-        
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2017" class="archive-year">2017</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2017/05/25/Activiti/" class="archive-article-date">
+  	<time datetime="2017-05-25T09:20:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-25</time>
+</a>
+        </div>
+    	 
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/05/25/Activiti/">Activiti</a>
+      <a class="archive-article-title" href="/2017/05/25/Activiti/">Activiti</a>
     </h1>
   
 
-        
-        <a href="/2017/05/25/Activiti/" class="archive-article-date">
-  	<time datetime="2017-05-25T09:20:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-25</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>####工作流（Workflow）<br>就是业务过程的部分或整体在计算机应用环境下的自动化<br>主要解决的是“使在多个参与者之间按照某种定义的规则传递文档，信息或任务的过程自动进行，从而实现某个预期的业务目标，或者促使此目标的实现”</p>
-<p>####工作流管理系统（WFMS）<br>是一个软件系统，它完成工作量的定义和管理，并按照在系统中预先定义好的工作流规则进行工作流实例的执行。工作流管理系统不是企业的业务系统，而是为企业的业务系统的运行提供了一个软件的支撑环境</p>
-<p>####工作流管理系统的目标<br>管理工作的流程以确保工作在正确的时间被期望的人员所执行——在自动化进行的业务过程中插入人工的执行和干预  </p>
-<p>####Activiti介绍<br>Activiti5是由Alfresco软件在2010年5月17日发布的业务流程管理（BPM）框架，它是覆盖了业务流程管理、工作流、服务协作等领域的一个开源的、灵活的、易扩展的可执行流程语言框架。Activiti基于Apache许可的开源BPM平台，创始人Tom Baeyens是JBoss jBPM的项目架构师，它特色是提供了eclipse插件，开发人员可以通过插件直接绘画出业务  </p>
-<p>####工作流引擎<br>ProcessEngine对象，这是Activiti工作的核心。负责生成流程运行时的各种实例及数据、监控和管理流程的运行。  </p>
-<p>####BPMN</p>
-<p>业务流程建模与标注（Business Process Model and Notation，BPMN) ，描述流程的基本符号，包括这些图元如何组合成一个业务流程图（Business Process Diagram）  </p>
-<p>####核心配置文件<br>    activiti.cfg.xml<br>    <beans xmlns="http://www.springframework.org/schema/beans" xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemalocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
-    http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd
-    http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd"><br>    &lt;!–<br>        ProcessEngineConfiguration processEngineConfiguration = ProcessEngineConfiguration.createStandaloneProcessEngineConfiguration();<br>        //连接数据库的配置<br>        processEngineConfiguration.setJdbcDriver(“com.mysql.jdbc.Driver”);<br>        processEngineConfiguration.setJdbcUrl(“jdbc:mysql://localhost:3306/itcast0711activiti?useUnicode=true&amp;characterEncoding=utf8”);<br>        processEngineConfiguration.setJdbcUsername(“root”);<br>        processEngineConfiguration.setJdbcPassword(“root”);</beans></p>
-<pre><code>    /**
-         public static final String DB_SCHEMA_UPDATE_FALSE = &quot;false&quot;;不能自动创建表，需要表存在
-          public static final String DB_SCHEMA_UPDATE_CREATE_DROP = &quot;create-drop&quot;;先删除表再创建表
-          public static final String DB_SCHEMA_UPDATE_TRUE = &quot;true&quot;;如果表不存在，自动创建表
-     */
-    processEngineConfiguration.setDatabaseSchemaUpdate(ProcessEngineConfiguration.DB_SCHEMA_UPDATE_TRUE);
- --&gt;
-&lt;bean id=&quot;processEngineConfiguration&quot; class=&quot;org.activiti.engine.impl.cfg.StandaloneProcessEngineConfiguration&quot;&gt;
-    &lt;!-- 连接数据的配置 --&gt;
-    &lt;property name=&quot;jdbcDriver&quot; value=&quot;com.mysql.jdbc.Driver&quot;&gt;&lt;/property&gt;
-    &lt;property name=&quot;jdbcUrl&quot; value=&quot;jdbc:mysql://localhost:3306/itcast0711activiti?useUnicode=true&amp;amp;characterEncoding=utf8&quot;&gt;&lt;/property&gt;
-    &lt;property name=&quot;jdbcUsername&quot; value=&quot;root&quot;&gt;&lt;/property&gt;
-    &lt;property name=&quot;jdbcPassword&quot; value=&quot;root&quot;&gt;&lt;/property&gt;
-    &lt;!-- 没有表创建表 --&gt;
-    &lt;property name=&quot;databaseSchemaUpdate&quot; value=&quot;true&quot;&gt;&lt;/property&gt;
-&lt;/bean&gt;
-&lt;/beans&gt;  
-</code></pre><blockquote>
-<p> 看到这里不得不感叹一下spring的强大，整合了java半壁江山  </p>
-<p>####数据库<br>初始化数据库<br>方法一：  </p>
-</blockquote>
-<pre><code>//创建工作流需要的数据库 
-@Test
-public void createTable(){
-    ProcessEngineConfiguration configuration = ProcessEngineConfiguration.createStandaloneProcessEngineConfiguration();
-    configuration.setJdbcDriver(&quot;com.mysql.jdbc.Driver&quot;);
-    configuration.setJdbcUrl(&quot;jdbc:mysql://localhost:3306/activiti&quot;);
-    configuration.setJdbcUsername(&quot;root&quot;);
-    configuration.setJdbcPassword(&quot;12345678&quot;);
-
-    /**
-         public static final String DB_SCHEMA_UPDATE_FALSE = &quot;false&quot;;不能自动创建表，需要表存在
-          public static final String DB_SCHEMA_UPDATE_CREATE_DROP = &quot;create-drop&quot;;先删除表再创建表
-          public static final String DB_SCHEMA_UPDATE_TRUE = &quot;true&quot;;如果表不存在，自动创建表
-     */
-    configuration.setDatabaseSchemaUpdate(ProcessEngineConfiguration.DB_SCHEMA_UPDATE_TRUE);
-    //工作流的核心对象，ProcessEnginee对象
-    ProcessEngine processEngine = configuration.buildProcessEngine();
-    System.out.println(&quot;processEngine:&quot;+processEngine);
-    }  
-</code></pre><p>方法二：  由于方法一要有代码比较麻烦，所以有配置文件替代：<br>activiti.cfg.xml  </p>
-<pre><code>&lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot;
-xmlns:context=&quot;http://www.springframework.org/schema/context&quot; xmlns:tx=&quot;http://www.springframework.org/schema/tx&quot;
-xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
-xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
-http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd
-http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd&quot;&gt;
-&lt;!-- 
-    ProcessEngineConfiguration processEngineConfiguration = ProcessEngineConfiguration.createStandaloneProcessEngineConfiguration();
-    //连接数据库的配置
-    processEngineConfiguration.setJdbcDriver(&quot;com.mysql.jdbc.Driver&quot;);
-    processEngineConfiguration.setJdbcUrl(&quot;jdbc:mysql://localhost:3306/itcast0711activiti?useUnicode=true&amp;characterEncoding=utf8&quot;);
-    processEngineConfiguration.setJdbcUsername(&quot;root&quot;);
-    processEngineConfiguration.setJdbcPassword(&quot;root&quot;);
-
-    /**
-         public static final String DB_SCHEMA_UPDATE_FALSE = &quot;false&quot;;不能自动创建表，需要表存在
-          public static final String DB_SCHEMA_UPDATE_CREATE_DROP = &quot;create-drop&quot;;先删除表再创建表
-          public static final String DB_SCHEMA_UPDATE_TRUE = &quot;true&quot;;如果表不存在，自动创建表
-     */
-    processEngineConfiguration.setDatabaseSchemaUpdate(ProcessEngineConfiguration.DB_SCHEMA_UPDATE_TRUE);
- --&gt;
-&lt;bean id=&quot;processEngineConfiguration&quot; class=&quot;org.activiti.engine.impl.cfg.StandaloneProcessEngineConfiguration&quot;&gt;
-    &lt;!-- 连接数据的配置 --&gt;
-    &lt;property name=&quot;jdbcDriver&quot; value=&quot;com.mysql.jdbc.Driver&quot;&gt;&lt;/property&gt;
-    &lt;property name=&quot;jdbcUrl&quot; value=&quot;jdbc:mysql://localhost:3306/itcast0711activiti?useUnicode=true&amp;amp;characterEncoding=utf8&quot;&gt;&lt;/property&gt;
-    &lt;property name=&quot;jdbcUsername&quot; value=&quot;root&quot;&gt;&lt;/property&gt;
-    &lt;property name=&quot;jdbcPassword&quot; value=&quot;12345678&quot;&gt;&lt;/property&gt;
-    &lt;!-- 没有表创建表 --&gt;
-    &lt;property name=&quot;databaseSchemaUpdate&quot; value=&quot;true&quot;&gt;&lt;/property&gt;
-&lt;/bean&gt;
-&lt;/beans&gt;  
-
-
-/**使用配置文件创建工作流需要的23张表*/
-@Test
-public void createTable_2(){
-//        ProcessEngineConfiguration processEngineConfiguration = ProcessEngineConfiguration.createProcessEngineConfigurationFromResource(&quot;activiti.cfg.xml&quot;);
-//        //工作流的核心对象，ProcessEnginee对象
-//        ProcessEngine processEngine = processEngineConfiguration.buildProcessEngine();
-
-    ProcessEngine processEngine = ProcessEngineConfiguration.createProcessEngineConfigurationFromResource(&quot;activiti.cfg.xml&quot;)    //
-                                .buildProcessEngine();
-    System.out.println(&quot;processEngine:&quot;+processEngine);
-}
-</code></pre><p>Activiti用来存放流程数据一共使用了23张表 都是以Act_开头的 底层操作使用的mybatis操作   </p>
-<blockquote>
-<p>工作流Activiti的表是用来存储流程数据的 而业务数据都需要用户自己创建和维护  一定要让业务去关联流程 才能关联工作流系统  </p>
-<p>####API<br><strong><em>流程引擎ProcessEngine对象<br>在Activiti中最核心的类，其他的类都是由他而来。  
-</em></strong>由流程引擎ProcessEngine对象创建各个Service,这些Service是调用工作流23张表的服务  </p>
-<p>######RepositoryService  管理流程定义   </p>
-<p>######RuntimeService  执行管理，包括启动，推进，删除流程实例等操作  </p>
-<p>######TaskService 任务管理<br>HistoryService 历史管理（执行完的数据的管理）<br>IdentityService 组织机构管理<br>FormService 一个可选服务，任务表单管理<br>ManagerService   </p>
-<p>####流程的执行过程<br>    ProcessEngine processEngine = ProcessEngines.getDefaultProcessEngine();<br>    /<em>*部署流程定义</em>/<br>    @Test<br>    public void deploymentProcessDefinition(){</p>
-</blockquote>
-<pre><code>    Deployment deployment = processEngine.getRepositoryService()//与流程定义和部署对象相关的Service
-                    .createDeployment()//创建一个部署对象
-                    .name(&quot;helloworld入门程序&quot;)//添加部署的名称
-                    .addClasspathResource(&quot;diagrams/helloworld.bpmn&quot;)//从classpath的资源中加载，一次只能加载一个文件
-                    .addClasspathResource(&quot;diagrams/helloworld.png&quot;)//从classpath的资源中加载，一次只能加载一个文件
-                    .deploy();//完成部署
-    System.out.println(&quot;部署ID：&quot;+deployment.getId());//1
-    System.out.println(&quot;部署名称：&quot;+deployment.getName());//helloworld入门程序  
-}
-/**启动流程实例*/
-@Test
-public void startProcessInstance(){
-    //流程定义的key
-    String processDefinitionKey = &quot;helloword&quot;;
-    ProcessInstance pi = processEngine.getRuntimeService()//与正在执行的流程实例和执行对象相关的Service
-                    .startProcessInstanceByKey(processDefinitionKey);//使用流程定义的key启动流程实例，key对应helloworld.bpmn文件中id的属性值，使用key值启动，默认是按照最新版本的流程定义启动
-    System.out.println(&quot;流程实例ID:&quot;+pi.getId());//流程实例ID    101
-    System.out.println(&quot;流程定义ID:&quot;+pi.getProcessDefinitionId());//流程定义ID   helloworld:1:4
-}
-
-/**查询当前人的个人任务*/
-@Test
-public void findMyPersonalTask(){
-    String assignee = &quot;张三&quot;;
-    List&lt;Task&gt; list = processEngine.getTaskService()//与正在执行的任务管理相关的Service
-                    .createTaskQuery()//创建任务查询对象
-                    .taskAssignee(assignee)//指定个人任务查询，指定办理人
-                    .list();
-    if(list!=null &amp;&amp; list.size()&gt;0){
-        for(Task task:list){
-            System.out.println(&quot;任务ID:&quot;+task.getId());
-            System.out.println(&quot;任务名称:&quot;+task.getName());
-            System.out.println(&quot;任务的创建时间:&quot;+task.getCreateTime());
-            System.out.println(&quot;任务的办理人:&quot;+task.getAssignee());
-            System.out.println(&quot;流程实例ID：&quot;+task.getProcessInstanceId());
-            System.out.println(&quot;执行对象ID:&quot;+task.getExecutionId());
-            System.out.println(&quot;流程定义ID:&quot;+task.getProcessDefinitionId());
-            System.out.println(&quot;########################################################&quot;);
-        }
-    }
-}
-
-/**完成我的任务*/
-@Test
-public void completeMyPersonalTask(){
-    //任务ID
-    String taskId = &quot;204&quot;;
-    processEngine.getTaskService()//与正在执行的任务管理相关的Service
-                .complete(taskId);
-    System.out.println(&quot;完成任务：任务ID：&quot;+taskId);
-}
-</code></pre>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -345,152 +189,19 @@ public void completeMyPersonalTask(){
 		</ul>
 	</div>
 
-      
+          
 
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/05/25/Activiti/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
+        </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-
-
-
-
-
-
-
   
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
+  
+    </div></section>
+  
+
     
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/05/13/hello-world/">Hello World</a>
-    </h1>
-  
-
-        
-        <a href="/2017/05/13/hello-world/" class="archive-article-date">
-  	<time datetime="2017-05-13T04:40:37.709Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-13</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/05/13/hello-world/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-青春" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/24/青春/">青春</a>
-    </h1>
-  
-
-        
-        <a href="/2017/03/24/青春/" class="archive-article-date">
-  	<time datetime="2017-03-24T15:15:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-24</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>18岁的时候，你觉得自己还能永远停留在这个阶段，还在惋惜青春，感叹没有做几件疯狂的事情；<br>19岁的时候，开始学会观察这个世界，有着自己的小情绪，棱角分明，敏感而脆弱；<br>20岁的时候，你想成为一个温和平静的人，修炼自己的心性，写下了“你已亭亭，无惧风雨”的期许；<br>21岁的开始，你想成为一个内心强大的人，坚持自己喜欢的生活方式，距离梦想越来越近。<br>
-        
-          <a class="article-more-a" href="/2017/03/24/青春/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">记事</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/03/24/青春/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-  
 
 
           </div>
@@ -512,10 +223,10 @@ public void completeMyPersonalTask(){
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
+		isHome: false,
 		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: false,
 		root: "/",
