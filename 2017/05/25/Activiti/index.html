@@ -15,7 +15,7 @@
 <meta property="og:url" content="https:fengjisen.github.io/2017/05/25/Activiti/index.html">
 <meta property="og:site_name" content="Fenng Code">
 <meta property="og:description" content="工作流（Workflow)就是业务过程的部分或整体在计算机应用环境下的自动化主要解决的是“使在多个参与者之间按照某种定义的规则传递文档，信息或任务的过程自动进行，从而实现某个预期的业务目标，或者促使此目标的实现” 工作流管理系统（WFMS）是一个软件系统，它完成工作量的定义和管理，并按照在系统中预先定义好的工作流规则进行工作流实例的执行。工作流管理系统不是企业的业务系统，而是为企业的业务系统的运行">
-<meta property="og:updated_time" content="2017-05-25T14:08:58.528Z">
+<meta property="og:updated_time" content="2017-05-25T14:10:26.677Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Activiti">
 <meta name="twitter:description" content="工作流（Workflow)就是业务过程的部分或整体在计算机应用环境下的自动化主要解决的是“使在多个参与者之间按照某种定义的规则传递文档，信息或任务的过程自动进行，从而实现某个预期的业务目标，或者促使此目标的实现” 工作流管理系统（WFMS）是一个软件系统，它完成工作量的定义和管理，并按照在系统中预先定义好的工作流规则进行工作流实例的执行。工作流管理系统不是企业的业务系统，而是为企业的业务系统的运行">
@@ -282,12 +282,13 @@ public void createTable_2(){
 <h4 id="API"><a href="#API" class="headerlink" title="API"></a>API</h4><p><strong><em>流程引擎ProcessEngine对象<br>在Activiti中最核心的类，其他的类都是由他而来。  
 </em></strong>由流程引擎ProcessEngine对象创建各个Service,这些Service是调用工作流23张表的服务  </p>
 <h6 id="RepositoryService-管理流程定义"><a href="#RepositoryService-管理流程定义" class="headerlink" title="RepositoryService  管理流程定义"></a>RepositoryService  管理流程定义</h6><h6 id="RuntimeService-执行管理，包括启动，推进，删除流程实例等操作"><a href="#RuntimeService-执行管理，包括启动，推进，删除流程实例等操作" class="headerlink" title="RuntimeService  执行管理，包括启动，推进，删除流程实例等操作"></a>RuntimeService  执行管理，包括启动，推进，删除流程实例等操作</h6><h6 id="TaskService-任务管理"><a href="#TaskService-任务管理" class="headerlink" title="TaskService 任务管理"></a>TaskService 任务管理</h6><p>HistoryService 历史管理（执行完的数据的管理）<br>IdentityService 组织机构管理<br>FormService 一个可选服务，任务表单管理<br>ManagerService   </p>
-<h4 id="流程的执行过程"><a href="#流程的执行过程" class="headerlink" title="流程的执行过程"></a>流程的执行过程</h4><pre><code>ProcessEngine processEngine = ProcessEngines.getDefaultProcessEngine();
+<h4 id="流程的执行过程"><a href="#流程的执行过程" class="headerlink" title="流程的执行过程"></a>流程的执行过程</h4></blockquote>
+<pre><code>ProcessEngine processEngine = ProcessEngines.getDefaultProcessEngine();
 /**部署流程定义*/
 @Test
 public void deploymentProcessDefinition(){
-</code></pre></blockquote>
-<pre><code>    Deployment deployment = processEngine.getRepositoryService()//与流程定义和部署对象相关的Service
+
+    Deployment deployment = processEngine.getRepositoryService()//与流程定义和部署对象相关的Service
                     .createDeployment()//创建一个部署对象
                     .name(&quot;helloworld入门程序&quot;)//添加部署的名称
                     .addClasspathResource(&quot;diagrams/helloworld.bpmn&quot;)//从classpath的资源中加载，一次只能加载一个文件
@@ -537,11 +538,11 @@ public void completeMyPersonalTask(){
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">activiti工作流</a>
+                <a href="javascript:void(0)" class="js-tag color3">记事</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">记事</a>
+                <a href="javascript:void(0)" class="js-tag color2">activiti工作流</a>
               </li>
             
             <div class="clearfix"></div>
