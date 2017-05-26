@@ -6,17 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https:fengjisen.github.io">
-  <title>Tag: activiti工作流 | Fenng Code</title>
+  <title>探索activiti中的23张表 | Fenng Code</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="胆小认生，不易相处，年轻无为，卖马为生。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Fenng Code">
-<meta property="og:url" content="https:fengjisen.github.io/tags/activiti工作流/index.html">
+  <meta name="description" content="数据库Activiti数据库支持：Activiti的后台是有数据库的支持，所有的表都以ACT_开头。 第二部分是表示表的用途的两个字母标识。用途也和服务的API对应。     ACTRE*: ‘RE’表示repository。 这个前缀的表包含了流程定义和流程静态资源（图片，规则，等等）。   ACTRU*: ‘RU’表示runtime。 这些运行时的表，包含流程实例，任务，变量，异步任务，等运行">
+<meta name="keywords" content="activiti工作流">
+<meta property="og:type" content="article">
+<meta property="og:title" content="探索activiti中的23张表">
+<meta property="og:url" content="https:fengjisen.github.io/2017/05/26/探索activiti中的23张表/index.html">
 <meta property="og:site_name" content="Fenng Code">
-<meta property="og:description" content="胆小认生，不易相处，年轻无为，卖马为生。">
+<meta property="og:description" content="数据库Activiti数据库支持：Activiti的后台是有数据库的支持，所有的表都以ACT_开头。 第二部分是表示表的用途的两个字母标识。用途也和服务的API对应。     ACTRE*: ‘RE’表示repository。 这个前缀的表包含了流程定义和流程静态资源（图片，规则，等等）。   ACTRU*: ‘RU’表示runtime。 这些运行时的表，包含流程实例，任务，变量，异步任务，等运行">
+<meta property="og:updated_time" content="2017-05-26T04:37:52.130Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Fenng Code">
-<meta name="twitter:description" content="胆小认生，不易相处，年轻无为，卖马为生。">
+<meta name="twitter:title" content="探索activiti中的23张表">
+<meta name="twitter:description" content="数据库Activiti数据库支持：Activiti的后台是有数据库的支持，所有的表都以ACT_开头。 第二部分是表示表的用途的两个字母标识。用途也和服务的API对应。     ACTRE*: ‘RE’表示repository。 这个前缀的表包含了流程定义和流程静态资源（图片，规则，等等）。   ACTRU*: ‘RU’表示runtime。 这些运行时的表，包含流程实例，任务，变量，异步任务，等运行">
   
     <link rel="alternative" href="/atom.xml" title="Fenng Code" type="application/atom+xml">
   
@@ -148,36 +150,104 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-探索activiti中的23张表" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      探索activiti中的23张表
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/05/26/探索activiti中的23张表/" class="archive-article-date">
+
+        
+        <a href="/2017/05/26/探索activiti中的23张表/" class="archive-article-date">
   	<time datetime="2017-05-26T04:08:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-26</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/05/26/探索activiti中的23张表/">探索activiti中的23张表</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h4><p>Activiti数据库支持：<br>Activiti的后台是有数据库的支持，所有的表都以ACT_开头。 第二部分是表示表的用途的两个字母标识。用途也和服务的API对应。  </p>
+<blockquote>
+<p> ACT<em>RE</em>*: ‘RE’表示repository。 这个前缀的表包含了流程定义和流程静态资源（图片，规则，等等）。  </p>
+<p>ACT<em>RU</em>*: ‘RU’表示runtime。 这些运行时的表，包含流程实例，任务，变量，异步任务，等运行中的数据。 Activiti只在流程实例执行过程中保存这些数据，在流程结束时就会删除这些记录。 这样运行时表可以一直很小速度很快。  </p>
+<p>ACT<em>ID</em>*: ‘ID’表示identity。 这些表包含身份信息，比如用户，组等等。  </p>
+<p>ACT<em>HI</em><em>: ‘HI’表示history。 这些表包含历史数据，比如历史流程实例，变量，任务等等。<br>ACT<em>GE</em></em>: 通用数据， 用于不同场景下，如存放资源文件。<br><a id="more"></a>  </p>
+<h4 id="表结构操作："><a href="#表结构操作：" class="headerlink" title="表结构操作："></a>表结构操作：</h4><p>资源库流程规则表</p>
+</blockquote>
+<pre><code>1)act_re_deployment         部署信息表
 
-        <div class="article-info info-on-right">
-          
+2)act_re_model              流程设计模型部署表
+
+3)act_re_procdef            流程定义数据表  
+</code></pre><blockquote>
+<p>运行时数据库表</p>
+</blockquote>
+<pre><code>1)act_ru_execution             运行时流程执行实例表
+
+2)act_ru_identitylink          运行时流程人员表，主要存储任务节点与参与者的相关信息
+
+3)act_ru_task               运行时任务节点表
+
+4)act_ru_variable           运行时流程变量数据表  
+</code></pre><blockquote>
+<p>历史数据库表</p>
+</blockquote>
+<pre><code>1)act_hi_actinst             历史节点表
+
+2)act_hi_attachment          历史附件表
+
+3)act_hi_comment               历史意见表    
+
+4)act_hi_identitylink        历史流程人员表
+
+5)act_hi_detail              历史详情表，提供历史变量的查询
+
+6)act_hi_procinst            历史流程实例表
+
+7)act_hi_taskinst            历史任务实例表
+
+8)act_hi_varinst             历史变量表  
+</code></pre><blockquote>
+<p>组织机构表</p>
+</blockquote>
+<pre><code>1)act_id_group               用户组信息表
+
+2)act_id_info                用户扩展信息表
+
+3)act_id_membership          用户与用户组对应信息表
+
+4)act_id_user                用户信息表  
+这四张表很常见，基本的组织机构管理，关于用户认证方面建议还是自己开发一套，组件自带的功能太简单，使用中有很多需求难以满足  
+</code></pre><blockquote>
+<p>通用数据表</p>
+</blockquote>
+<pre><code>1)act_ge_bytearray            二进制数据表
+
+2)act_ge_property             属性数据表存储整个流程引擎级别的数据,初始化表结构时，会默认插入三条记录，  
+</code></pre><h4 id="bpmn文件"><a href="#bpmn文件" class="headerlink" title="bpmn文件"></a>bpmn文件</h4><blockquote>
+<p>BPMN 2.0根节点是definitions节点。 这个元素中，可以定义多个流程定义（不过我们建议每个文件只包含一个流程定义， 可以简化开发过程中的维护难度）。 一个空的流程定义看起来像下面这样。注意，definitions元素 最少也要包含xmlns 和 targetNamespace的声明。 targetNamespace可以是任意值，它用来对流程实例进行分类  </p>
+</blockquote>
+<h4 id="部署流程定义（classpath路径加载文件）"><a href="#部署流程定义（classpath路径加载文件）" class="headerlink" title="部署流程定义（classpath路径加载文件）"></a>部署流程定义（classpath路径加载文件）</h4><blockquote>
+<p>1)先获取流程引擎对象：在创建时会自动加载classpath下的activiti.cfg.xml<br>2)首先获得默认的流程引擎，通过流程引擎获取了一个RepositoryService对象（仓库对象）<br>3)由仓库的服务对象产生一个部署对象配置对象，用来封装部署操作的相关配置<br>4)这是一个链式编程，在部署配置对象中设置显示名，上传流程定义规则文件<br>5)向数据库表中存放流程定义的规则信息。<br>6)这一步在数据库中将操作三张表：<br>a)act_re_deployment（部署对象表）</p>
+<p>存放流程定义的显示名和部署时间，每部署一次增加一条记录</p>
+<p>b)act_re_procdef（流程定义表）</p>
+<p>存放流程定义的属性信息，部署每个新的流程定义都会在这张表中增加一条记录。</p>
+<p>注意：当流程定义的key相同的情况下，使用的是版本升级</p>
+<p>c)act_ge_bytearray（资源文件表）</p>
+<p>存储流程定义相关的部署信息。即流程定义文档的存放地。每部署一次就会增加两条记录，一条是关于bpmn规则文件的，一条是图片的（如果部署时只指定了bpmn一个文件，activiti会在部署时解析bpmn文件内容自动生成流程图）。两个文件不是很大，都是以二进制形式存储在数据库中。  </p>
+<h6 id="但是部署bpmn文件时不建议直接部署bpmn文件-建议和png文件打成zip包在部署"><a href="#但是部署bpmn文件时不建议直接部署bpmn文件-建议和png文件打成zip包在部署" class="headerlink" title="但是部署bpmn文件时不建议直接部署bpmn文件   建议和png文件打成zip包在部署"></a>但是部署bpmn文件时不建议直接部署bpmn文件   建议和png文件打成zip包在部署</h6></blockquote>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -189,57 +259,106 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http:https:fengjisen.github.io/2017/05/26/探索activiti中的23张表/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/05/25/activiti-0/" class="archive-article-date">
-  	<time datetime="2017-05-25T14:34:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-25</time>
-</a>
-        </div>
-    	 
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/05/25/activiti-0/">activiti</a>
-    </h1>
+  
+    <a href="/2017/05/25/activiti-0/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">activiti</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+  
+  <div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="探索activiti中的23张表" data-title="探索activiti中的23张表" data-url="https:fengjisen.github.io/2017/05/26/探索activiti中的23张表/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">activiti工作流</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -262,9 +381,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		root: "/",
